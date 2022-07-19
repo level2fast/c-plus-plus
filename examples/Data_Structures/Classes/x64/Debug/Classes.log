@@ -1,0 +1,7 @@
+﻿  Classes.cpp
+C:\Github\c-plus-plus\examples\Data_Structures\Classes\Classes.cpp(96,34): warning C4305: 'argument': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  Classes.vcxproj -> C:\Github\c-plus-plus\examples\Data_Structures\x64\Debug\Classes.exe

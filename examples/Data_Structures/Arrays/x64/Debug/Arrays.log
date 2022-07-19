@@ -1,0 +1,3 @@
+﻿  Arrays.cpp
+C:\Github\c-plus-plus\examples\Data_Structures\Arrays\Arrays.cpp(9,9): warning C4101: 'A': unreferenced local variable
+  Arrays.vcxproj -> C:\Github\c-plus-plus\examples\Data_Structures\x64\Debug\Arrays.exe
