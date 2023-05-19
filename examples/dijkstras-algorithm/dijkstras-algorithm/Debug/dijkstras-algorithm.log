@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\stevend\source\repos\dijkstras-algorithm-new\dijkstras-algorithm\dijkstras-algorithm\main.cpp(101,23): warning C4018: '<': signed/unsigned mismatch
+  dijkstras-algorithm.vcxproj -> C:\Users\stevend\source\repos\dijkstras-algorithm-new\dijkstras-algorithm\Debug\dijkstras-algorithm.exe
