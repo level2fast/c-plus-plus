@@ -1,2 +1,5 @@
+# Graph
+![](NodeMap.png)
 
-![](examples/dijkstras-algorithm/NodeMap.png)
+# Shortest Path Calcuation
+![](console-output.PNG)
