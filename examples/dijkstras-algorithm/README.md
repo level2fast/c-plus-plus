@@ -4,5 +4,6 @@ This project implements Dijkstras algorithm using a test data set that is formed
 # Graph
 ![](NodeMap.png)
 
+<br />
 # Shortest Path Calcuation
 ![](console-output.PNG)
