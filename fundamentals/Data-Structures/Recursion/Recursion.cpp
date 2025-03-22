@@ -16,6 +16,19 @@ class myexception : public exception
 void indirect_recur2(int n);
 void indirect_recur(int n);
 
+// Taylor Series
+double e(int x, int n)
+{
+    static double p = 1, f = 1;
+    double r;
+    if (n == 0)
+        return 1;
+
+    r = e(x, n - 1);
+    p = p * x;
+    f = f * n;
+    return r + p / f;
+}
 
 // recursive function that executes a statement prior to 
 // making recursive call
@@ -153,58 +166,60 @@ int power1(int b, int e)
 }
 int main()
 {
-    // call recursive function. Pay special attention to 
-    // the order that the integers are printed out.
+        // call recursive function. Pay special attention to 
+        // the order that the integers are printed out.
 
-    // Types of recursion:
-    // 1. Tail Recursion: if function calls itself and the function all
-    // is the last function in the call.
-    // Example:
+        // Types of recursion:
+        // 1. Tail Recursion: if function calls itself and the function all
+        // is the last function in the call.
+        // Example:
         cout << "Tail Recursion: recursive_func2(5)" << endl;
         recursive_func2(5);
         cout << endl;
-    // 2. Head Recursion: all the processing is done at return time. The function
-    // does no processing before making the recursive call 
-    // Example:
+        // 2. Head Recursion: all the processing is done at return time. The function
+        // does no processing before making the recursive call 
+        // Example:
         cout << "Head Recursion: recursive_func1(5)" << endl;
         recursive_func1(5);
         cout << endl;
-    // 3. Tree Recursion: a function that calls itself more than one time.
-    // Makes 2^(n+1) - 1 number of calls so Time complexity: O(2^n) for this example.
-    // Space complexity: O(n)
-    // Example:
+        // 3. Tree Recursion: a function that calls itself more than one time.
+        // Makes 2^(n+1) - 1 number of calls so Time complexity: O(2^n) for this example.
+        // Space complexity: O(n)
+        // Example:
         cout << "tree_recursion(5): " << endl;
         tree_recursion(5);
         cout << endl;
 
-    // 4. Indirect Recursion
-    // Example:
+        // 4. Indirect Recursion
+        // Example:
         cout << "indirect_recur(20): " << endl;
         indirect_recur(20);
         cout << endl;
-    // 5. Nested Recursion
-    // Example:
+        // 5. Nested Recursion
+        // Example:
         int r;
         r = nested_recur(200);
         cout <<"nested_recur(200): "<< r << endl << endl;
 
-    // 6. Sum of N Recursion
+        // 6. Sum of N Recursion
         int result = sum(5);
         cout << "Sum of N Recursion: sum(5): "<< result << endl << endl;
 
-    // 7. Recursive function for finding factorial
+        // 7. Recursive function for finding factorial
         int result_fact = fact(-1);
         cout << "Recursive function for finding factorial: fact(0): " << result_fact << endl << endl;
 
-    // 8. Power recurstion
+        // 8. Power recurstion
         int result_power = power(2, 9);
         cout << "Recursive function for computing power b^e: power(2,9): " << result_power << endl << endl;
         int result_power1 = power(2, 9);
         cout << "Fast Recursive function for computing power b^e: power1(2,9): " << result_power1 << endl << endl;
 
         // static variable and recursion
-        cout << "recursive_func_static_var(5):" << endl;
-        recursive_func_static_var(5);
+        cout << "recursive_func_static_var(5):" << recursive_func_static_var(5)<<endl<<endl;
+
+        // Taylor series recursive call e()
+        cout << "Recursive function for computing Taylor Series: " << e(4, 15) << endl << endl;
 
         return 0;
 

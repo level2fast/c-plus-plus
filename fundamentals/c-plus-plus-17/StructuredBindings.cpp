@@ -9,5 +9,6 @@ int main()
     auto [x, y] = a;
 
     auto &[xr, yr] = a; // xr refers to a[0], yr refers to a[1]
-    return 0;
+
+        return 0;
 }
