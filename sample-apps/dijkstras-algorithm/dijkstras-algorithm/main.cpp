@@ -53,7 +53,7 @@ int main()
 
 
     // Now it's time for Dijkstras Algorithm processing
-    // First we'll build a graph/tree of nodes with edges connecting
+    // First we'll build a graph of nodes with edges connecting
     // them. 
     int V = 9;
 
