@@ -106,9 +106,10 @@ int main()
     // Now we can create our priority que. I decided to use the STL priority_queue
     // class to make things easier since it is templated already. 
     // Create a min prioirity queue based on the weight of each path
-   // priority_queue<Node, vector<Node>, compareWeights> myPQ;
+    // priority_queue<Node, vector<Node>, compareWeights> myPQ;
     Dijkstras Algorithm;
-    // Add all nodes to the priority queue.
+
+    // Add 1 nodes to the priority queue.
     Algorithm.myPQ.push(graph.nodes[0]);
 
     // Let's take a look at our priority queue. Node Id 0 should be on top.
