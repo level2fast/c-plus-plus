@@ -5,7 +5,7 @@ map<int, int> Node::path_weight;
 void Dijkstras::findShortestPath(Node* root)
 {
 	// Pop the root node off of the priority queue.
-	Node temp = myPQ.top();
+	Node temp;
 	while (!myPQ.empty())
 	{
 		temp = myPQ.top();
