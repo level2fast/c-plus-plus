@@ -110,14 +110,6 @@ int main()
     Dijkstras Algorithm;
     // Add all nodes to the priority queue.
     Algorithm.myPQ.push(graph.nodes[0]);
-    Algorithm.myPQ.push(graph.nodes[1]);
-    Algorithm.myPQ.push(graph.nodes[2]);
-    Algorithm.myPQ.push(graph.nodes[3]);
-    Algorithm.myPQ.push(graph.nodes[4]);
-    Algorithm.myPQ.push(graph.nodes[5]);
-    Algorithm.myPQ.push(graph.nodes[6]);
-    Algorithm.myPQ.push(graph.nodes[7]);
-    Algorithm.myPQ.push(graph.nodes[8]);
 
     // Let's take a look at our priority queue. Node Id 0 should be on top.
     cout << endl << "Top element in Priority Queue:" <<endl << 
@@ -127,7 +119,7 @@ int main()
     // all other nodes in the graph!
 
     cout << "Find the shortest path to each node in our tree starting with Node 0" << endl << endl;
-    Algorithm.findShortestPath(&graph.nodes[0]);
+    Algorithm.findShortestPath(graph);
     Algorithm.printShortestPath(0);
 
     return 0;

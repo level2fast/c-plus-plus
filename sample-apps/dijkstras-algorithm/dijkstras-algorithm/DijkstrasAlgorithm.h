@@ -68,7 +68,7 @@ public:
 
     // Fuction to find the shortest path 
     // starting from any node in the tree
-    void findShortestPath(Node * root);
+    void findShortestPath(Graph &graph);
 
     // Prints each node and total distance to
     // get there from stat node

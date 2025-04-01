@@ -2,27 +2,28 @@
 
 map<int, int> Node::path_weight;
 
-void Dijkstras::findShortestPath(Node* root)
+void Dijkstras::findShortestPath(Graph &graph)
 {
 	// Pop the root node off of the priority queue.
 	Node temp;
+
+	// Visit the neighbor of each node in the tree starting
+	// from the root.
 	while (!myPQ.empty())
 	{
 		temp = myPQ.top();
 		for (Node neighbor : temp.neighbors)
 		{
 			int weightThroughEdge = Node::path_weight[temp.id] + neighbor.edge;
-			if (weightThroughEdge < Node::path_weight[neighbor.id])
+			if (weightThroughEdge < Node::path_weight[neighbor.id] && previousNode[temp.id] != neighbor.id)
 			{
 				Node::path_weight[neighbor.id] = weightThroughEdge;
 				previousNode[neighbor.id] = temp.id;
+				myPQ.push(graph.nodes[neighbor.id]);
 			}
 		}
 		myPQ.pop();
 	}
-
-	// Visit the neighbor of each node in the tree starting
-	// from the root.
 }
 void Dijkstras::printShortestPath(int nodeId)
 {
@@ -37,9 +38,6 @@ void Dijkstras::printShortestPath(int nodeId)
 		print(x.first);
 		cout << endl;
 	}
-
-	//cout << previousNode[1] << 1;
-	//call print again recursively passing in previousNode[1];
 }
 void Dijkstras::print(int key)
 {
